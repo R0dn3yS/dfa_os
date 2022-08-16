@@ -1,11 +1,11 @@
 #![no_std]
 #![no_main]
 #![feature(custom_test_frameworks)]
-#![test_runner(dfa_os::test_runner)]
+#![test_runner(emu_kernel::test_runner)]
 #![reexport_test_harness_main = "test_main"]
 
 use core::panic::PanicInfo;
-use dfa_os::println;
+use emu_kernel::println;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
@@ -27,5 +27,5 @@ fn panic(info: &PanicInfo) -> ! {
 #[cfg(test)]
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
-  dfa_os::test_panic_handler(info)
+  emu_kernel::test_panic_handler(info)
 }

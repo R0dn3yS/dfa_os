@@ -1,5 +1,5 @@
 [package]
-name = "dfa_os"
+name = "emu_kernel"
 version = "0.1.0"
 edition = "2021"
 authors = ["Rodney van den Velden <rodney@dfagaming.nl>"]
